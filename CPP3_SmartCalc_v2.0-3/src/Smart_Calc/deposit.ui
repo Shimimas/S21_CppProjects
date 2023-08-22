@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Deposit</class>
+ <widget class="QWidget" name="Deposit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>362</width>
+    <height>543</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Deposit_calc</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(68, 235, 153);</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>-30</x>
+     <y>-20</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/resource/images/sber.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../misc/images/sber.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>10</y>
+     <width>211</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 11pt &quot;Uroob&quot;;
+color: rgb(255, 255, 255);
+font-size: 32px;</string>
+   </property>
+   <property name="text">
+    <string>DepositCalc_v2.0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhHiddenText</set>
+   </property>
+   <property name="text">
+    <string>Сумма вклада</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="text">
+    <string>Срок размещения (мес.)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="text">
+    <string>Процентная ставка</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="text">
+    <string>Налоговая ставка</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	color: rgb(255, 255, 255);
+	font: 75 11pt &quot;Ubuntu Condensed&quot;;
+	font-size: 25px;</string>
+   </property>
+   <property name="text">
+    <string>Раз в год</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>200</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	color: rgb(255, 255, 255);
+	font: 75 11pt &quot;Ubuntu Condensed&quot;;
+	font-size: 25px;</string>
+   </property>
+   <property name="text">
+    <string>Раз в месяц</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>220</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	color: rgb(255, 255, 255);
+	font: 75 11pt &quot;Ubuntu Condensed&quot;;
+	font-size: 25px;</string>
+   </property>
+   <property name="text">
+    <string>Раз в полгода</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	color: rgb(255, 255, 255);
+	font: 75 11pt &quot;Ubuntu Condensed&quot;;
+	font-size: 25px;</string>
+   </property>
+   <property name="text">
+    <string>В конце срока</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>70</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;
+	qproperty-alignment: AlignRight;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>100</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;
+	qproperty-alignment: AlignRight;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_3">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>130</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;
+	qproperty-alignment: AlignRight;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_4">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>160</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;
+	qproperty-alignment: AlignRight;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>250</y>
+     <width>281</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	color: rgb(255, 255, 255);
+	font: 75 11pt &quot;Ubuntu Condensed&quot;;
+	font-size: 25px;</string>
+   </property>
+   <property name="text">
+    <string>Капитализация процентов</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_add">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="text">
+    <string>+ пополнение</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear_add">
+   <property name="geometry">
+    <rect>
+     <x>178</x>
+     <y>290</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="text">
+    <string>- пополнение</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_get">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>330</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="text">
+    <string>+ снятие</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear_get">
+   <property name="geometry">
+    <rect>
+     <x>178</x>
+     <y>330</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="text">
+    <string>- снятие</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>370</y>
+     <width>339</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(0, 0, 0);
+	color: rgb(243, 243, 243);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="text">
+    <string>Расчитать условия</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>440</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhHiddenText</set>
+   </property>
+   <property name="text">
+    <string>Начисленные проценты</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>470</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhHiddenText</set>
+   </property>
+   <property name="text">
+    <string>Сумма налога</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>500</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhHiddenText</set>
+   </property>
+   <property name="text">
+    <string>Итоговая сумма вклада</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>410</y>
+     <width>339</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(0, 0, 0);
+	color: rgb(243, 243, 243);
+	border: 3px solid gray;
+	font-size: 20px;
+	qproperty-alignment: AlignCenter;</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhHiddenText</set>
+   </property>
+   <property name="text">
+    <string>Результат</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>440</y>
+     <width>99</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;
+	qproperty-alignment: AlignRight;</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhHiddenText</set>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>470</y>
+     <width>99</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;
+	qproperty-alignment: AlignRight;</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhHiddenText</set>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>500</y>
+     <width>99</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 20px;
+	qproperty-alignment: AlignRight;</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhHiddenText</set>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

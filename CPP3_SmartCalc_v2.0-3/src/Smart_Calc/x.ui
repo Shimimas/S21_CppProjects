@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>X</class>
+ <widget class="QWidget" name="X">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>211</width>
+    <height>73</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>x</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(68, 235, 153);</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>-30</x>
+     <y>-20</y>
+     <width>111</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/resource/images/sber.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../misc/images/sber.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>10</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 15px;
+	qproperty-alignment: AlignCenter;</string>
+   </property>
+   <property name="text">
+    <string>x</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border: 3px solid gray;
+	font-size: 15px;
+	qproperty-alignment: AlignRight;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>40</y>
+     <width>111</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {	
+	background-color: rgb(0, 0, 0);
+	color: rgb(243, 243, 243);
+	border: 3px solid gray;
+	font-size: 15px;
+}
+
+QPushButton:pressed {
+	background-color:rgb(46, 52, 54);
+}</string>
+   </property>
+   <property name="text">
+    <string>Ввести</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
